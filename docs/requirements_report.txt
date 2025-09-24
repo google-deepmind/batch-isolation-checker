@@ -1,0 +1,324 @@
+Total Models Checked: 1077
+├── Skipped models due to errors: 23
+├── Unsupported models due to dynamic shapes: 200
+└── Fixed models: 854 (candidates)
+ ├── Models with all operators implemented: 357 (supported)
+ └── Models with missing operators: 497
+ ├── Models with missing label operators: 497
+ └── Models with missing data operators: 85
+
+================ Missing Operators ================
+We currently have the LABEL operators implemented for 357/854 models. The following implementation order will provide the fastest increase in model coverage:
+├── ai.onnx.Split: +18   (total: 375/854)
+├── ai.onnx.Squeeze: +110   (total: 485/854)
+├── ai.onnx.BatchNormalization: +55   (total: 540/854)
+├── ai.onnx.AveragePool: +93   (total: 633/854)
+├── ai.onnx.Tile: +64   (total: 697/854)
+├── ai.onnx.Resize: +26   (total: 723/854)
+├── ai.onnx.InstanceNormalization: +20   (total: 743/854)
+├── ai.onnx.Pad: +16   (total: 759/854)
+├── ai.onnx.CumSum: +18   (total: 777/854)
+├── ai.onnx.Dropout: +13   (total: 790/854)
+├── ai.onnx.LRN: +10   (total: 800/854)
+├── ai.onnx.QuantizeLinear: +12   (total: 812/854)
+├── ai.onnx.Min: +8   (total: 820/854)
+├── ai.onnx.Sum: +8   (total: 828/854)
+├── ai.onnx.LSTM: +5   (total: 833/854)
+├── ai.onnx.Einsum: +2   (total: 835/854)
+├── ai.onnx.GatherElements: +5   (total: 840/854)
+├── ai.onnx.Upsample: +5   (total: 845/854)
+├── ai.onnx.EyeLike: +3   (total: 848/854)
+├── ai.onnx.Max: +2   (total: 850/854)
+├── ai.onnx.OneHot: +2   (total: 852/854)
+├── ai.onnx.QLinearConv: +1   (total: 853/854)
+└── ai.onnx.QLinearMatMul: +1   (total: 854/854)
+We currently have the DATA operators implemented for 769/854 models. The following implementation order will provide the fastest increase in model coverage:
+├── ai.onnx.Resize: +29   (total: 798/854)
+├── ai.onnx.InstanceNormalization: +20   (total: 818/854)
+├── ai.onnx.CumSum: +21   (total: 839/854)
+├── ai.onnx.LSTM: +5   (total: 844/854)
+├── ai.onnx.Upsample: +5   (total: 849/854)
+├── ai.onnx.EyeLike: +3   (total: 852/854)
+├── ai.onnx.QLinearConv: +1   (total: 853/854)
+└── ai.onnx.QLinearMatMul: +1   (total: 854/854)
+
+
+
+============== Model Ids with Errors ==============
+Natural_Language_Processing/skip/bart_Opset18_transformers/bart_Opset18.onnx
+Natural_Language_Processing/skip/led_Opset18_transformers/led_Opset18.onnx
+Natural_Language_Processing/skip/mvp_Opset18_transformers/mvp_Opset18.onnx
+Natural_Language_Processing/skip/transfoxl_Opset18_transformers/transfoxl_Opset18.onnx
+Natural_Language_Processing/skip/transfoxllmhead_Opset18_transformers/transfoxllmhead_Opset18.onnx
+validated/vision/classification/alexnet/model/bvlcalexnet-3.onnx
+validated/vision/classification/caffenet/model/caffenet-3.onnx
+validated/vision/classification/densenet-121/model/densenet-3.onnx
+validated/vision/classification/inception_and_googlenet/inception_v1/model/inception-v1-3.onnx
+validated/vision/classification/inception_and_googlenet/inception_v2/model/inception-v2-3.onnx
+validated/vision/classification/rcnn_ilsvrc13/model/rcnn-ilsvrc13-3.onnx
+validated/vision/classification/resnet/model/resnet50-caffe2-v1-3.onnx
+validated/vision/classification/resnet/model/resnet50-caffe2-v1-6.onnx
+validated/vision/classification/resnet/preproc/resnet-preproc-v1-18.onnx
+validated/vision/classification/shufflenet/model/shufflenet-3.onnx
+validated/vision/classification/squeezenet/model/squeezenet1.0-3.onnx
+validated/vision/classification/vgg/model/vgg19-caffe2-3.onnx
+validated/vision/classification/zfnet-512/model/zfnet512-3.onnx
+validated/vision/object_detection_segmentation/retinanet/model/retinanet-9.onnx
+validated/vision/object_detection_segmentation/tiny-yolov3/model/tiny-yolov3-11.onnx
+validated/vision/object_detection_segmentation/yolov3/model/yolov3-10.onnx
+validated/vision/object_detection_segmentation/yolov3/model/yolov3-12-int8.onnx
+validated/vision/object_detection_segmentation/yolov3/model/yolov3-12.onnx
+
+
+
+
+
+========== Model Ids with Dynamic Shapes ==========
+Computer_Vision/dm_nfnet_f0_Opset17_timm/dm_nfnet_f0_Opset17.onnx
+Computer_Vision/dm_nfnet_f1_Opset17_timm/dm_nfnet_f1_Opset17.onnx
+Computer_Vision/dm_nfnet_f2_Opset17_timm/dm_nfnet_f2_Opset17.onnx
+Computer_Vision/dm_nfnet_f3_Opset17_timm/dm_nfnet_f3_Opset17.onnx
+Computer_Vision/dm_nfnet_f4_Opset17_timm/dm_nfnet_f4_Opset17.onnx
+Computer_Vision/eca_nfnet_l0_Opset17_timm/eca_nfnet_l0_Opset17.onnx
+Computer_Vision/eca_nfnet_l1_Opset17_timm/eca_nfnet_l1_Opset17.onnx
+Computer_Vision/eca_nfnet_l2_Opset17_timm/eca_nfnet_l2_Opset17.onnx
+Computer_Vision/fasterrcnn_mobilenet_v3_large_320_fpn_Opset18_torchvision/fasterrcnn_mobilenet_v3_large_320_fpn_Opset18.onnx
+Computer_Vision/fasterrcnn_mobilenet_v3_large_fpn_Opset18_torchvision/fasterrcnn_mobilenet_v3_large_fpn_Opset18.onnx
+Computer_Vision/fasterrcnn_resnet50_fpn_v2_Opset18_torchvision/fasterrcnn_resnet50_fpn_v2_Opset18.onnx
+Computer_Vision/fcos_resnet50_fpn_Opset18_torchvision/fcos_resnet50_fpn_Opset18.onnx 
+Computer_Vision/jx_nest_base_Opset18_timm/jx_nest_base_Opset18.onnx
+Computer_Vision/jx_nest_small_Opset17_timm/jx_nest_small_Opset17.onnx
+Computer_Vision/jx_nest_tiny_Opset18_timm/jx_nest_tiny_Opset18.onnx
+Computer_Vision/lambda_resnet26rpt_256_Opset18_timm/lambda_resnet26rpt_256_Opset18.onnx
+Computer_Vision/maskrcnn_resnet50_fpn_v2_Opset18_torchvision/maskrcnn_resnet50_fpn_v2_Opset18.onnx  
+Computer_Vision/nasnetalarge_Opset18_timm/nasnetalarge_Opset18.onnx
+Computer_Vision/nf_regnet_b1_Opset17_timm/nf_regnet_b1_Opset17.onnx
+Computer_Vision/nf_resnet50_Opset17_timm/nf_resnet50_Opset17.onnx
+Computer_Vision/nfnet_l0_Opset17_timm/nfnet_l0_Opset17.onnx 
+Computer_Vision/pnasnet5large_Opset18_timm/pnasnet5large_Opset18.onnx
+Computer_Vision/resnetv2_101x1_bitm_Opset17_timm/resnetv2_101x1_bitm_Opset17.onnx
+Computer_Vision/resnetv2_101x1_bitm_in21k_Opset17_timm/resnetv2_101x1_bitm_in21k_Opset17.onnx
+validated/vision/classification/squeezenet/model/squeezenet1.0-8.onnx
+validated/vision/classification/squeezenet/model/squeezenet1.0-9.onnx
+validated/vision/classification/vgg/model/vgg16-12-int8.onnx
+validated/vision/classification/vgg/model/vgg19-caffe2-6.onnx
+validated/vision/classification/vgg/model/vgg19-caffe2-7.onnx
+validated/vision/classification/vgg/model/vgg19-caffe2-8.onnx
+validated/vision/classification/vgg/model/vgg19-caffe2-9.onnx
+validated/vision/classification/zfnet-512/model/zfnet512-12-int8.onnx
+validated/vision/classification/zfnet-512/model/zfnet512-6.onnx
+validated/vision/object_detection_segmentation/faster-rcnn/model/FasterRCNN-10.onnx
+validated/vision/object_detection_segmentation/faster-rcnn/model/FasterRCNN-12-int8.onnx
+validated/vision/object_detection_segmentation/faster-rcnn/model/FasterRCNN-12-qdq.onnx
+validated/vision/object_detection_segmentation/faster-rcnn/model/FasterRCNN-12.onnx
+validated/vision/object_detection_segmentation/fcn/model/fcn-resnet50-12-int8.onnx
+validated/vision/object_detection_segmentation/mask-rcnn/model/MaskRCNN-10.onnx
+validated/vision/object_detection_segmentation/mask-rcnn/model/MaskRCNN-12-int8.onnx
+validated/vision/object_detection_segmentation/mask-rcnn/model/MaskRCNN-12-qdq.onnx
+validated/vision/object_detection_segmentation/mask-rcnn/model/MaskRCNN-12.onnx
+validated/vision/object_detection_segmentation/ssd-mobilenetv1/model/ssd_mobilenet_v1_10.onnx
+validated/vision/object_detection_segmentation/ssd-mobilenetv1/model/ssd_mobilenet_v1_12-int8.onnx
+validated/vision/object_detection_segmentation/ssd-mobilenetv1/model/ssd_mobilenet_v1_12.onnx
+validated/vision/object_detection_segmentation/ssd-mobilenetv1/model/ssd_mobilenet_v1_13-qdq.onnx
+validated/vision/object_detection_segmentation/ssd/model/ssd-10.onnx
+validated/vision/object_detection_segmentation/ssd/model/ssd-12-int8.onnx
+validated/vision/object_detection_segmentation/ssd/model/ssd-12-qdq.onnx
+validated/vision/object_detection_segmentation/ssd/model/ssd-12.onnx
+validated/vision/style_transfer/fast_neural_style/model/candy-9.onnx
+validated/vision/style_transfer/fast_neural_style/model/mosaic-9.onnx
+validated/vision/style_transfer/fast_neural_style/model/pointilism-9.onnx
+validated/vision/style_transfer/fast_neural_style/model/rain-princess-9.onnx
+validated/vision/style_transfer/fast_neural_style/model/udnie-9.onnx
+validated/vision/classification/alexnet/model/bvlcalexnet-6.onnx
+validated/vision/classification/alexnet/model/bvlcalexnet-7.onnx
+validated/vision/classification/alexnet/model/bvlcalexnet-8.onnx
+validated/vision/classification/alexnet/model/bvlcalexnet-9.onnx
+validated/vision/classification/caffenet/model/caffenet-12-int8.onnx
+validated/vision/classification/caffenet/model/caffenet-6.onnx
+validated/vision/classification/caffenet/model/caffenet-7.onnx
+validated/vision/classification/caffenet/model/caffenet-8.onnx
+validated/vision/classification/caffenet/model/caffenet-9.onnx
+validated/vision/classification/densenet-121/model/densenet-12-int8.onnx
+validated/vision/classification/efficientnet-lite4/model/efficientnet-lite4-11-int8.onnx
+validated/vision/classification/inception_and_googlenet/googlenet/model/googlenet-12-int8.onnx
+validated/vision/classification/inception_and_googlenet/googlenet/model/googlenet-3.onnx
+validated/vision/classification/inception_and_googlenet/googlenet/model/googlenet-6.onnx
+validated/vision/classification/inception_and_googlenet/googlenet/model/googlenet-7.onnx
+validated/vision/classification/inception_and_googlenet/googlenet/model/googlenet-8.onnx
+validated/vision/classification/inception_and_googlenet/googlenet/model/googlenet-9.onnx
+validated/vision/classification/inception_and_googlenet/inception_v1/model/inception-v1-12-int8.onnx
+validated/vision/classification/inception_and_googlenet/inception_v1/model/inception-v1-6.onnx
+validated/vision/classification/inception_and_googlenet/inception_v1/model/inception-v1-7.onnx
+validated/vision/classification/inception_and_googlenet/inception_v1/model/inception-v1-8.onnx
+validated/vision/classification/inception_and_googlenet/inception_v1/model/inception-v1-9.onnx
+validated/vision/classification/inception_and_googlenet/inception_v2/model/inception-v2-6.onnx
+validated/vision/classification/mnist/model/mnist-1.onnx
+validated/vision/classification/mnist/model/mnist-12-int8.onnx
+validated/vision/classification/mobilenet/model/mobilenetv2-12-int8.onnx
+validated/vision/classification/rcnn_ilsvrc13/model/rcnn-ilsvrc13-6.onnx
+validated/vision/classification/rcnn_ilsvrc13/model/rcnn-ilsvrc13-7.onnx
+validated/vision/classification/rcnn_ilsvrc13/model/rcnn-ilsvrc13-8.onnx
+validated/vision/classification/rcnn_ilsvrc13/model/rcnn-ilsvrc13-9.onnx
+validated/vision/classification/resnet/model/resnet50-v1-12-int8.onnx
+validated/vision/classification/shufflenet/model/shufflenet-6.onnx
+validated/vision/classification/shufflenet/model/shufflenet-v2-12-int8.onnx
+validated/vision/classification/squeezenet/model/squeezenet1.0-12-int8.onnx
+validated/vision/classification/squeezenet/model/squeezenet1.0-6.onnx
+validated/vision/classification/squeezenet/model/squeezenet1.0-7.onnx
+validated/vision/classification/squeezenet/model/squeezenet1.0-8.onnx
+Computer_Vision/tf_efficientnetv2_l_in21ft1k_Opset17_timm/tf_efficientnetv2_l_in21ft1k_Opset17.onnx 13:32:32 [146/1818]
+Computer_Vision/tf_efficientnetv2_l_in21k_Opset17_timm/tf_efficientnetv2_l_in21k_Opset17.onnx
+Computer_Vision/tf_efficientnetv2_m_Opset17_timm/tf_efficientnetv2_m_Opset17.onnx
+Computer_Vision/tf_efficientnetv2_m_in21ft1k_Opset17_timm/tf_efficientnetv2_m_in21ft1k_Opset17.onnx 
+Computer_Vision/tf_efficientnetv2_m_in21k_Opset17_timm/tf_efficientnetv2_m_in21k_Opset17.onnx
+Computer_Vision/tf_efficientnetv2_s_Opset17_timm/tf_efficientnetv2_s_Opset17.onnx
+Computer_Vision/tf_efficientnetv2_s_in21ft1k_Opset17_timm/tf_efficientnetv2_s_in21ft1k_Opset17.onnx 
+Computer_Vision/tf_efficientnetv2_s_in21k_Opset17_timm/tf_efficientnetv2_s_in21k_Opset17.onnx
+Computer_Vision/tf_efficientnetv2_xl_in21ft1k_Opset17_timm/tf_efficientnetv2_xl_in21ft1k_Opset17.onnx
+Computer_Vision/tf_efficientnetv2_xl_in21k_Opset17_timm/tf_efficientnetv2_xl_in21k_Opset17.onnx 
+Computer_Vision/tf_mixnet_l_Opset17_timm/tf_mixnet_l_Opset17.onnx
+Computer_Vision/tf_mixnet_m_Opset17_timm/tf_mixnet_m_Opset17.onnx
+Computer_Vision/tf_mixnet_s_Opset17_timm/tf_mixnet_s_Opset17.onnx
+Computer_Vision/tf_mobilenetv3_large_075_Opset17_timm/tf_mobilenetv3_large_075_Opset17.onnx 
+Computer_Vision/tf_mobilenetv3_large_100_Opset17_timm/tf_mobilenetv3_large_100_Opset17.onnx 
+Computer_Vision/tf_mobilenetv3_large_minimal_100_Opset18_timm/tf_mobilenetv3_large_minimal_100_Opset18.onnx
+Computer_Vision/tf_mobilenetv3_small_075_Opset17_timm/tf_mobilenetv3_small_075_Opset17.onnx 
+Computer_Vision/tf_mobilenetv3_small_minimal_100_Opset17_timm/tf_mobilenetv3_small_minimal_100_Opset17.onnx
+Computer_Vision/twins_svt_base_Opset17_timm/twins_svt_base_Opset17.onnx 
+Computer_Vision/twins_svt_large_Opset17_timm/twins_svt_large_Opset17.onnx
+Computer_Vision/twins_svt_small_Opset17_timm/twins_svt_small_Opset17.onnx
+Graph_Machine_Learning/feastconv_Opset18_graph_convolutions/feastconv_Opset18.onnx
+Natural_Language_Processing/funnel_Opset18_transformers/funnel_Opset18.onnx 
+Natural_Language_Processing/funnelbase_Opset18_transformers/funnelbase_Opset18.onnx  
+Natural_Language_Processing/longformer_Opset18_transformers/longformer_Opset18.onnx  
+Natural_Language_Processing/skip/switchtransformersencoder_Opset17_transformers/switchtransformersencoder_Opset17.onnx
+validated/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx
+validated/text/machine_comprehension/bidirectional_attention_flow/model/bidaf-11-int8.onnx  
+validated/text/machine_comprehension/bidirectional_attention_flow/model/bidaf-9.onnx 
+validated/text/machine_comprehension/gpt-2/model/gpt2-10.onnx
+validated/text/machine_comprehension/gpt-2/model/gpt2-lm-head-10.onnx
+validated/text/machine_comprehension/gpt2-bs/model/gpt2-lm-head-bs-12.onnx
+validated/text/machine_comprehension/roberta/model/roberta-sequence-classification-9.onnx
+validated/vision/body_analysis/arcface/model/arcfaceresnet100-11-int8.onnx
+validated/vision/body_analysis/emotion_ferplus/model/emotion-ferplus-2.onnx
+validated/vision/body_analysis/ultraface/models/version-RFB-320-int8.onnx
+validated/vision/classification/alexnet/model/bvlcalexnet-12-int8.onnx
+validated/vision/classification/alexnet/model/bvlcalexnet-6.onnx
+Computer_Vision/tf_efficientnet_b0_Opset17_timm/tf_efficientnet_b0_Opset17.onnx 
+Computer_Vision/tf_efficientnet_b0_ns_Opset17_timm/tf_efficientnet_b0_ns_Opset17.onnx
+Computer_Vision/tf_efficientnet_b1_Opset17_timm/tf_efficientnet_b1_Opset17.onnx 
+Computer_Vision/tf_efficientnet_b1_ap_Opset17_timm/tf_efficientnet_b1_ap_Opset17.onnx
+Computer_Vision/tf_efficientnet_b1_ns_Opset17_timm/tf_efficientnet_b1_ns_Opset17.onnx
+Computer_Vision/tf_efficientnet_b2_ap_Opset17_timm/tf_efficientnet_b2_ap_Opset17.onnx
+Computer_Vision/tf_efficientnet_b3_Opset17_timm/tf_efficientnet_b3_Opset17.onnx 
+Computer_Vision/tf_efficientnet_b3_ap_Opset17_timm/tf_efficientnet_b3_ap_Opset17.onnx
+Computer_Vision/tf_efficientnet_b3_ns_Opset17_timm/tf_efficientnet_b3_ns_Opset17.onnx
+Computer_Vision/tf_efficientnet_b4_Opset17_timm/tf_efficientnet_b4_Opset17.onnx 
+Computer_Vision/tf_efficientnet_b4_ap_Opset17_timm/tf_efficientnet_b4_ap_Opset17.onnx
+Computer_Vision/tf_efficientnet_b4_ns_Opset17_timm/tf_efficientnet_b4_ns_Opset17.onnx
+Computer_Vision/tf_efficientnet_b5_Opset17_timm/tf_efficientnet_b5_Opset17.onnx 
+Computer_Vision/tf_efficientnet_b5_ap_Opset17_timm/tf_efficientnet_b5_ap_Opset17.onnx
+Computer_Vision/tf_efficientnet_b5_ns_Opset17_timm/tf_efficientnet_b5_ns_Opset17.onnx
+Computer_Vision/tf_efficientnet_b6_Opset17_timm/tf_efficientnet_b6_Opset17.onnx 
+Computer_Vision/tf_efficientnet_b6_ap_Opset17_timm/tf_efficientnet_b6_ap_Opset17.onnx
+Computer_Vision/tf_efficientnet_b6_ns_Opset17_timm/tf_efficientnet_b6_ns_Opset17.onnx
+Computer_Vision/tf_efficientnet_b7_ap_Opset17_timm/tf_efficientnet_b7_ap_Opset17.onnx
+Computer_Vision/tf_efficientnet_b8_Opset17_timm/tf_efficientnet_b8_Opset17.onnx 
+Computer_Vision/tf_efficientnet_b8_ap_Opset17_timm/tf_efficientnet_b8_ap_Opset17.onnx
+Computer_Vision/tf_efficientnet_el_Opset18_timm/tf_efficientnet_el_Opset18.onnx 
+Computer_Vision/tf_efficientnet_em_Opset18_timm/tf_efficientnet_em_Opset18.onnx 
+Computer_Vision/tf_efficientnet_es_Opset18_timm/tf_efficientnet_es_Opset18.onnx
+Computer_Vision/tf_efficientnet_l2_ns_475_Opset17_timm/tf_efficientnet_l2_ns_475_Opset17.onnx
+Computer_Vision/tf_efficientnet_l2_ns_Opset17_timm/tf_efficientnet_l2_ns_Opset17.onnx
+Computer_Vision/tf_efficientnet_lite0_Opset18_timm/tf_efficientnet_lite0_Opset18.onnx
+Computer_Vision/tf_efficientnet_lite1_Opset18_timm/tf_efficientnet_lite1_Opset18.onnx
+Computer_Vision/tf_efficientnet_lite2_Opset18_timm/tf_efficientnet_lite2_Opset18.onnx
+Computer_Vision/tf_efficientnet_lite3_Opset18_timm/tf_efficientnet_lite3_Opset18.onnx
+Computer_Vision/tf_efficientnet_lite4_Opset18_timm/tf_efficientnet_lite4_Opset18.onnx
+Computer_Vision/tf_efficientnetv2_b0_Opset17_timm/tf_efficientnetv2_b0_Opset17.onnx  
+Computer_Vision/tf_efficientnetv2_b1_Opset17_timm/tf_efficientnetv2_b1_Opset17.onnx  
+Computer_Vision/tf_efficientnetv2_b2_Opset17_timm/tf_efficientnetv2_b2_Opset17.onnx  
+Computer_Vision/tf_efficientnetv2_b3_Opset17_timm/tf_efficientnetv2_b3_Opset17.onnx  
+Computer_Vision/tf_efficientnetv2_l_Opset17_timm/tf_efficientnetv2_l_Opset17.onnx
+Computer_Vision/tf_efficientnetv2_l_in21ft1k_Opset17_timm/tf_efficientnetv2_l_in21ft1k_Opset17.onnx 
+Computer_Vision/resnetv2_101x1_bitm_in21k_Opset17_timm/resnetv2_101x1_bitm_in21k_Opset17.onnx  13:32:32 [292/1818]
+Computer_Vision/resnetv2_152x2_bit_teacher_384_Opset17_timm/resnetv2_152x2_bit_teacher_384_Opset17.onnx  
+Computer_Vision/resnetv2_152x2_bit_teacher_Opset17_timm/resnetv2_152x2_bit_teacher_Opset17.onnx 
+Computer_Vision/resnetv2_152x2_bitm_Opset17_timm/resnetv2_152x2_bitm_Opset17.onnx
+Computer_Vision/resnetv2_50x1_bit_distilled_Opset17_timm/resnetv2_50x1_bit_distilled_Opset17.onnx
+Computer_Vision/resnetv2_50x1_bitm_Opset17_timm/resnetv2_50x1_bitm_Opset17.onnx 
+Computer_Vision/resnetv2_50x1_bitm_in21k_Opset17_timm/resnetv2_50x1_bitm_in21k_Opset17.onnx 
+Computer_Vision/retinanet_resnet50_fpn_v2_Opset18_torchvision/retinanet_resnet50_fpn_v2_Opset18.onnx
+Computer_Vision/skip/jx_nest_small_Opset18_timm/jx_nest_small_Opset18.onnx  
+Computer_Vision/skip/resnetv2_50x3_bitm_Opset17_timm/resnetv2_50x3_bitm_Opset17.onnx 
+Computer_Vision/skip/swin_b_Opset18_torch_hub/swin_b_Opset18.onnx
+Computer_Vision/skip/swin_large_patch4_window7_224_in22k_Opset17_timm/swin_large_patch4_window7_224_in22k_Opset17.onnx
+Computer_Vision/skip/swin_s_Opset18_torch_hub/swin_s_Opset18.onnx
+Computer_Vision/skip/tf_efficientnet_b0_ap_Opset17_timm/tf_efficientnet_b0_ap_Opset17.onnx  
+Computer_Vision/skip/tf_efficientnet_b2_Opset17_timm/tf_efficientnet_b2_Opset17.onnx 
+Computer_Vision/skip/tf_efficientnet_b2_ns_Opset17_timm/tf_efficientnet_b2_ns_Opset17.onnx  
+Computer_Vision/skip/tf_efficientnet_b7_Opset17_timm/tf_efficientnet_b7_Opset17.onnx 
+Computer_Vision/skip/tf_efficientnet_b7_ns_Opset17_timm/tf_efficientnet_b7_ns_Opset17.onnx  
+Computer_Vision/skip/tf_mobilenetv3_small_100_Opset17_timm/tf_mobilenetv3_small_100_Opset17.onnx
+Computer_Vision/skip/tf_mobilenetv3_small_minimal_100_Opset18_timm/tf_mobilenetv3_small_minimal_100_Opset18.onnx
+Computer_Vision/skip/vit_b_16_Opset18_torch_hub/vit_b_16_Opset18.onnx
+Computer_Vision/skip/vit_b_32_Opset18_torch_hub/vit_b_32_Opset18.onnx
+Computer_Vision/skip/vit_l_16_Opset18_torch_hub/vit_l_16_Opset18.onnx
+Computer_Vision/skip/vit_l_32_Opset18_torch_hub/vit_l_32_Opset18.onnx
+Computer_Vision/swin_base_patch4_window12_384_Opset17_timm/swin_base_patch4_window12_384_Opset17.onnx
+Computer_Vision/swin_base_patch4_window12_384_in22k_Opset17_timm/swin_base_patch4_window12_384_in22k_Opset17.onnx
+Computer_Vision/swin_base_patch4_window7_224_Opset17_timm/swin_base_patch4_window7_224_Opset17.onnx 
+Computer_Vision/swin_base_patch4_window7_224_in22k_Opset17_timm/swin_base_patch4_window7_224_in22k_Opset17.onnx 
+Computer_Vision/swin_large_patch4_window12_384_Opset17_timm/swin_large_patch4_window12_384_Opset17.onnx  
+Computer_Vision/swin_large_patch4_window12_384_in22k_Opset17_timm/swin_large_patch4_window12_384_in22k_Opset17.onnx 
+Computer_Vision/swin_large_patch4_window7_224_Opset17_timm/swin_large_patch4_window7_224_Opset17.onnx
+Computer_Vision/swin_s3_base_224_Opset17_timm/swin_s3_base_224_Opset17.onnx 
+Computer_Vision/swin_s3_small_224_Opset17_timm/swin_s3_small_224_Opset17.onnx
+Computer_Vision/swin_s3_tiny_224_Opset17_timm/swin_s3_tiny_224_Opset17.onnx 
+Computer_Vision/swin_small_patch4_window7_224_Opset17_timm/swin_small_patch4_window7_224_Opset17.onnx
+Computer_Vision/swin_t_Opset18_torch_hub/swin_t_Opset18.onnx
+Computer_Vision/swin_tiny_patch4_window7_224_Opset17_timm/swin_tiny_patch4_window7_224_Opset17.onnx 
+Computer_Vision/tf_efficientnet_b0_Opset17_timm/tf_efficientnet_b0_Opset17.onnx 
+
+
+
+
+=============== Supported Model Ids ===============
+Computer_Vision/cait_m48_448_Opset18_timm/cait_m48_448_Opset18.onnx 
+Computer_Vision/cait_s24_224_Opset18_timm/cait_s24_224_Opset18.onnx 
+Computer_Vision/cait_s24_384_Opset16_timm/cait_s24_384_Opset16.onnx 
+Computer_Vision/cait_s36_384_Opset16_timm/cait_s36_384_Opset16.onnx 
+Computer_Vision/cait_xs24_384_Opset18_timm/cait_xs24_384_Opset18.onnx  
+Computer_Vision/cait_xxs24_384_Opset18_timm/cait_xxs24_384_Opset18.onnx
+Computer_Vision/cait_xxs36_224_Opset18_timm/cait_xxs36_224_Opset18.onnx
+Computer_Vision/cait_xxs36_384_Opset18_timm/cait_xxs36_384_Opset18.onnx
+Computer_Vision/convnext_base_384_in22ft1k_Opset18_timm/convnext_base_384_in22ft1k_Opset18.onnx
+Computer_Vision/convnext_base_Opset18_timm/convnext_base_Opset18.onnx  
+Computer_Vision/convnext_base_Opset18_torch_hub/convnext_base_Opset18.onnx
+Computer_Vision/convnext_base_in22ft1k_Opset18_timm/convnext_base_in22ft1k_Opset18.onnx  
+Computer_Vision/convnext_base_in22k_Opset18_timm/convnext_base_in22k_Opset18.onnx  
+Computer_Vision/convnext_large_384_in22ft1k_Opset18_timm/convnext_large_384_in22ft1k_Opset18.onnx 
+Computer_Vision/convnext_large_Opset18_timm/convnext_large_Opset18.onnx
+Computer_Vision/convnext_large_Opset18_torch_hub/convnext_large_Opset18.onnx 
+Computer_Vision/convnext_large_in22ft1k_Opset18_timm/convnext_large_in22ft1k_Opset18.onnx
+Computer_Vision/convnext_large_in22k_Opset18_timm/convnext_large_in22k_Opset18.onnx
+Computer_Vision/convnext_small_384_in22ft1k_Opset16_timm/convnext_small_384_in22ft1k_Opset16.onnx 
+Computer_Vision/convnext_small_Opset18_timm/convnext_small_Opset18.onnx
+Computer_Vision/convnext_small_Opset18_torch_hub/convnext_small_Opset18.onnx 
+Computer_Vision/convnext_small_in22ft1k_Opset17_timm/convnext_small_in22ft1k_Opset17.onnx
+Computer_Vision/convnext_small_in22k_Opset18_timm/convnext_small_in22k_Opset18.onnx
+Computer_Vision/convnext_tiny_Opset18_timm/convnext_tiny_Opset18.onnx  
+Computer_Vision/convnext_tiny_Opset18_torch_hub/convnext_tiny_Opset18.onnx
+Computer_Vision/convnext_tiny_in22ft1k_Opset18_timm/convnext_tiny_in22ft1k_Opset18.onnx  
+Computer_Vision/convnext_tiny_in22k_Opset18_timm/convnext_tiny_in22k_Opset18.onnx  
+Computer_Vision/convnext_xlarge_384_in22ft1k_Opset18_timm/convnext_xlarge_384_in22ft1k_Opset18.onnx  
+Computer_Vision/convnext_xlarge_in22ft1k_Opset17_timm/convnext_xlarge_in22ft1k_Opset17.onnx 
+Computer_Vision/convnext_xlarge_in22k_Opset18_timm/convnext_xlarge_in22k_Opset18.onnx 
+Computer_Vision/darknet53_Opset18_timm/darknet53_Opset18.onnx 
+Computer_Vision/dla102_Opset18_timm/dla102_Opset18.onnx 
+Computer_Vision/dla102x2_Opset18_timm/dla102x2_Opset18.onnx
+Computer_Vision/dla102x_Opset18_timm/dla102x_Opset18.onnx  
+Computer_Vision/dla169_Opset18_timm/dla169_Opset18.onnx
+
+
+...

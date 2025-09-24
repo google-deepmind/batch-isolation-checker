@@ -1,0 +1,61 @@
+=============================
+Wrote 932 results to /home/ubuntu/batching-security-checker/docs/hf-onnx-community/report.json , found 0 errors.
+Total Models Checked: 932
+├── Skipped models due to errors: 114
+├── Unsupported models due to dynamic shapes: 281
+└── Fixed models: 537 (candidates)
+    ├── Models with all operators implemented: 60
+    │   (supported)
+    └── Models with missing operators: 477
+        ├── Models with missing label operators: 477
+        └── Models with missing data operators: 445
+
+================ Missing Operators ================
+We currently have the LABEL operators implemented for 60/537 models. The
+following implementation order will provide the fastest increase in model
+coverage:
+├── ai.onnx.DynamicQuantizeLinear: +0   (total: 60/537)
+├── ai.onnx.MatMulInteger: +165   (total: 225/537)
+├── ai.onnx.ConvInteger: +55   (total: 280/537)
+├── ai.onnx.Squeeze: +81   (total: 361/537)
+├── ai.onnx.Resize: +22   (total: 383/537)
+├── ai.onnx.Tile: +7   (total: 390/537)
+├── ai.onnx.Split: +16   (total: 406/537)
+├── ai.onnx.GatherElements: +14   (total: 420/537)
+├── ai.onnx.ConvTranspose: +17   (total: 437/537)
+├── ai.onnx.InstanceNormalization: +11   (total: 448/537)
+├── ai.onnx.ReduceL2: +16   (total: 464/537)
+├── ai.onnx.ReduceMax: +0   (total: 464/537)
+├── ai.onnx.CumSum: +10   (total: 474/537)
+├── ai.onnx.TopK: +12   (total: 486/537)
+├── ai.onnx.Min: +15   (total: 501/537)
+├── ai.onnx.Einsum: +8   (total: 509/537)
+├── ai.onnx.ArgMax: +7   (total: 516/537)
+├── ai.onnx.BatchNormalization: +6   (total: 522/537)
+├── ai.onnx.AveragePool: +0   (total: 522/537)
+├── ai.onnx.Pad: +4   (total: 526/537)
+├── ai.onnx.GridSample: +4   (total: 530/537)
+├── ai.onnx.ReduceMin: +2   (total: 532/537)
+├── ai.onnx.RandomUniformLike: +2   (total: 534/537)
+├── ai.onnx.ReduceProd: +1   (total: 535/537)
+├── ai.onnx.RandomNormalLike: +1   (total: 536/537)
+└── ai.onnx.Max: +1   (total: 537/537)
+
+We currently have the DATA operators implemented for 92/537 models. The
+following implementation order will provide the fastest increase in model
+coverage:
+├── ai.onnx.DynamicQuantizeLinear: +0   (total: 92/537)
+├── ai.onnx.MatMulInteger: +265   (total: 357/537)
+├── ai.onnx.ConvInteger: +65   (total: 422/537)
+├── ai.onnx.Resize: +38   (total: 460/537)
+├── ai.onnx.ConvTranspose: +17   (total: 477/537)
+├── ai.onnx.InstanceNormalization: +13   (total: 490/537)
+├── ai.onnx.ReduceL2: +19   (total: 509/537)
+├── ai.onnx.CumSum: +18   (total: 527/537)
+├── ai.onnx.GridSample: +4   (total: 531/537)
+├── ai.onnx.ReduceMin: +2   (total: 533/537)
+├── ai.onnx.RandomUniformLike: +2   (total: 535/537)
+├── ai.onnx.ReduceProd: +1   (total: 536/537)
+└── ai.onnx.RandomNormalLike: +1   (total: 537/537)
+
+==================================================

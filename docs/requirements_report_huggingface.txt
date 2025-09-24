@@ -1,0 +1,922 @@
+Wrote 850 results to /home/ubuntu/batching-security-checker/report3 , found 0 errors.
+Total Models Checked: 850
+├── Skipped models due to errors: 29
+├── Unsupported models due to dynamic shapes: 11
+└── Fixed models: 437 (candidates)
+    ├── Models with all operators implemented: 45 (supported)
+    └── Models with missing operators: 392
+        ├── Models with missing label operators: 392
+        └── Models with missing data operators: 377
+
+
+================ Missing Operators ================
+We currently have the LABEL operators implemented for 45/437 models. The following implementation order will provide the
+fastest increase in model coverage:
+├── com.microsoft.MatMulNBits: +198   (total: 243/437)
+├── ai.onnx.Squeeze: +62   (total: 305/437)
+├── ai.onnx.Resize: +19   (total: 324/437)
+├── ai.onnx.Tile: +6   (total: 330/437)
+├── ai.onnx.Split: +14   (total: 344/437)
+├── ai.onnx.GatherElements: +14   (total: 358/437)
+├── ai.onnx.InstanceNormalization: +3   (total: 361/437)
+├── ai.onnx.CumSum: +10   (total: 371/437)
+├── ai.onnx.Min: +15   (total: 386/437)
+├── ai.onnx.ReduceMax: +0   (total: 386/437)
+├── ai.onnx.ConvTranspose: +11   (total: 397/437)
+├── ai.onnx.TopK: +12   (total: 409/437)
+├── ai.onnx.Einsum: +8   (total: 417/437)
+├── ai.onnx.ArgMax: +4   (total: 421/437)
+├── ai.onnx.ReduceL2: +3   (total: 424/437)
+├── ai.onnx.Pad: +1   (total: 425/437)
+├── ai.onnx.ReduceMin: +2   (total: 427/437)
+├── ai.onnx.RandomUniformLike: +2   (total: 429/437)
+├── ai.onnx.BatchNormalization: +2   (total: 431/437)
+├── ai.onnx.AveragePool: +2   (total: 433/437)
+├── ai.onnx.ReduceProd: +1   (total: 434/437)
+├── ai.onnx.DynamicQuantizeLinear: +0   (total: 434/437)
+├── ai.onnx.ConvInteger: +1   (total: 435/437)
+├── ai.onnx.RandomNormalLike: +1   (total: 436/437)
+└── ai.onnx.Max: +1   (total: 437/437)
+
+We currently have the DATA operators implemented for 60/437 models. The following implementation order will provide the fastest
+increase in model coverage:
+├── com.microsoft.MatMulNBits: +301   (total: 361/437)
+├── ai.onnx.Resize: +33   (total: 394/437)
+├── ai.onnx.InstanceNormalization: +4   (total: 398/437)
+├── ai.onnx.CumSum: +18   (total: 416/437)
+├── ai.onnx.ConvTranspose: +11   (total: 427/437)
+├── ai.onnx.ReduceL2: +3   (total: 430/437)
+├── ai.onnx.ReduceMin: +2   (total: 432/437)
+├── ai.onnx.RandomUniformLike: +2   (total: 434/437)
+├── ai.onnx.ReduceProd: +1   (total: 435/437)
+├── ai.onnx.DynamicQuantizeLinear: +0   (total: 435/437)
+├── ai.onnx.ConvInteger: +1   (total: 436/437)
+└── ai.onnx.RandomNormalLike: +1   (total: 437/437)
+
+
+================= Supported Models =================
+{
+    'dim_params': [{'seq_len': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'dequantizer',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Phi-3-mini-instruct-hexagon-npu-assets/dequantize
+r.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'seq_len': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'dequantizer',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Llama-3.2-3B-instruct-hexagon-npu-assets/dequanti
+zer.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'seq_len': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'quantizer',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Phi-3-mini-instruct-hexagon-npu-assets/quantizer.
+onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'seq_len': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'quantizer',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Llama-3.2-3B-instruct-hexagon-npu-assets/quantize
+r.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'Unsqueezeposition_ids_cos_before_quantizer_dim_2': 4, 'pos_ids_seq_len': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'position-shifter',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Llama-3.2-3B-instruct-hexagon-npu-assets/position
+-shifter.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'position-processor',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Phi-3-mini-instruct-hexagon-npu-assets/position-p
+rocessor.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'position-processor',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Llama-3.2-3B-instruct-hexagon-npu-assets/position
+-processor.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv3_small_050.lamb_in1k/onnx/model_q4.onn
+x',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenet_v2_0.35_96/onnx/model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv3_small_075.lamb_in1k/onnx/model_q4.onn
+x',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv3_small_100.lamb_in1k/onnx/model_q4.onn
+x',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenet_v1_0.75_192/onnx/model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenet_v2_0.75_160/onnx/model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenet_v2_1.0_224/onnx/model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenet_v2_1.0_224-ONNX/onnx/model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv4_conv_small.e2400_r224_in1k/onnx/model
+_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv4_conv_small.e1200_r224_in1k/onnx/model
+_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv4s-webnn/onnx/model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenet_v1_1.0_224/onnx/model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv3_rw.rmsp_in1k/onnx/model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv3_large_100.ra_in1k/onnx/model_q4.onnx'
+,
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv3_large_100.miil_in21k_ft_in1k/onnx/mod
+el_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenet_v2_1.4_224/onnx/model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv4_conv_medium.e500_r256_in1k/onnx/model
+_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv4_conv_medium.e500_r224_in1k/onnx/model
+_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv4_conv_blur_medium.e500_r224_in1k/onnx/
+model_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv3_large_100.miil_in21k/onnx/model_q4.on
+nx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv4_conv_large.e600_r384_in1k/onnx/model_
+q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'height': 4, 'num_channels': 4, 'width': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/model_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/mobilenetv4_conv_large.e500_r256_in1k/onnx/model_
+q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Florence-2-base-ft/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/OmniParser-v2.0_icon_caption/onnx/embed_tokens.on
+nx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Florence-2-base/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'encoder_sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/encoder_model',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/OmniParser-v2.0_icon_caption/onnx/encoder_model.o
+nnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Florence-2-large/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Florence-2-large-ft/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_fp16',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Phi-3-vision-128k-instruct-hf/onnx/embed_tokens_f
+p16.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/vision_encoder_q4f16',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Phi-3-vision-128k-instruct-hf/onnx/vision_encoder
+_q4f16.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/nanoLLaVA-1.5/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Janus-Pro-1B-ONNX/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/Qwen2-VL-2B-Instruct/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/ultravox-v0_5-llama-3_2-1b-ONNX/onnx/embed_tokens
+_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/paligemma2-3b-pt-224/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/paligemma2-3b-ft-docci-448/onnx/embed_tokens_q4.o
+nnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/paligemma2-3b-pt-448/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+
+{
+    'dim_params': [{'batch_size': 4, 'sequence_length': 4}],
+    'labeler': None,
+    'model_fixer': {},
+    'name': 'onnx/embed_tokens_q4',
+    'src': {
+        'path':
+'/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/paligemma2-3b-pt-896/onnx/embed_tokens_q4.onnx',
+        'type': 'local'
+    }
+}
+==========================================
+
+
+
+================ Models with Errors ================
+{
+    'position-shifter': '[ShapeInferenceError] Inference error(s): (op_type:Slice, node name: /Slice): [ShapeInferenceError]
+Inferred shape and existing shape differ in dimension 3: (48) vs (4)\n(op_type:Slice, node name: /Slice_1):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 3: (48) vs (4)',
+    'onnx/model_q4': "name 'model_path' is not defined",
+    'onnx/model': '[ShapeInferenceError] Inference error(s): (op_type:Concat, node name: /model/layers.0/self_attn/Concat_6):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/model/layers.0/self_attn/Concat_5): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /model/layers.1/self_attn/Concat_6): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /model/layers.1/self_attn/Concat_5): [ShapeInferenceError]
+Inferred shape and existing shape differ in dimension 2: (8) vs (4)',
+    'unet/model': "Data of TensorProto ( tensor name: conv_in.weight) should be stored in
+/home/ubuntu/batching-security-checker/data/hf-onnx-community/onnx-community/stable-diffusion-v1-5-ONNX/unet/weights.pb, but it
+doesn't exist or is not accessible.",
+    'onnx/decoder_model_merged_q4': "name 'model_path' is not defined",
+    'onnx/model_quantized': '[ShapeInferenceError] Inference error(s): (op_type:Concat, node name:
+/transformer/h.0/attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /transformer/h.0/attn/Concat_4): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.1/attn/Concat_3): [ShapeInferenceError] Inferred
+shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.1/attn/Concat_4):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/transformer/h.2/attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /transformer/h.2/attn/Concat_4): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.3/attn/Concat_3): [ShapeInferenceError] Inferred
+shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.3/attn/Concat_4):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/transformer/h.4/attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /transformer/h.4/attn/Concat_4): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.5/attn/Concat_3): [ShapeInferenceError] Inferred
+shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.5/attn/Concat_4):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/transformer/h.6/attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /transformer/h.6/attn/Concat_4): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.7/attn/Concat_3): [ShapeInferenceError] Inferred
+shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.7/attn/Concat_4):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/transformer/h.8/attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /transformer/h.8/attn/Concat_4): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.9/attn/Concat_3): [ShapeInferenceError] Inferred
+shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.9/attn/Concat_4):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/transformer/h.10/attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /transformer/h.10/attn/Concat_4): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.11/attn/Concat_3): [ShapeInferenceError] Inferred
+shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.11/attn/Concat_4):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/transformer/h.12/attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /transformer/h.12/attn/Concat_4): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.13/attn/Concat_3): [ShapeInferenceError] Inferred
+shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.13/attn/Concat_4):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/transformer/h.14/attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /transformer/h.14/attn/Concat_4): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.15/attn/Concat_3): [ShapeInferenceError] Inferred
+shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.15/attn/Concat_4):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/transformer/h.16/attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs
+(4)\n(op_type:Concat, node name: /transformer/h.16/attn/Concat_4): [ShapeInferenceError] Inferred shape and existing shape
+differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.17/attn/Concat_3): [ShapeInferenceError] Inferred
+shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /transformer/h.17/attn/Concat_4):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)',
+    'onnx/encoder_model_q4': '[ShapeInferenceError] Inference error(s): (op_type:Add, node name: /Add_2): [ShapeInferenceError]
+Incompatible dimensions',
+    'onnx/prompt_encoder_mask_decoder': '[ShapeInferenceError] Inference error(s): (op_type:Mul, node name: /Mul_14):
+[ShapeInferenceError] Incompatible dimensions\n(op_type:Add, node name: /Add_10): [ShapeInferenceError] Incompatible
+dimensions\n(op_type:Clip, node name: /Clip): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2:
+(256) vs (4)',
+    'onnx/decoder_model_q4': '[ShapeInferenceError] Inference error(s): (op_type:Tanh, node name: /decoder/tanh/Tanh):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (2048) vs (4)',
+    'onnx/decoder_postnet_and_vocoder_q4': '[ShapeInferenceError] Inference error(s): (op_type:Reshape, node name:
+/vocoder/Reshape): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 0: (1024) vs (4)',
+    'onnx/vision_model_q4': '[ShapeInferenceError] Inference error(s): (op_type:Reshape, node name:
+/vision_model/embeddings/Reshape): [ShapeInferenceError] Dimension could not be inferred: incompatible shapes',
+    'onnx/model_fp16': '[ShapeInferenceError] (op_type:Add, node name: /depth_model/decoder/Add_6): B has inconsistent type
+tensor(float16)',
+    'onnx/decoder_with_past_model_q4': "name 'model_path' is not defined",
+    'onnx/vision_encoder': '[ShapeInferenceError] Inference error(s): (op_type:Conv, node name: /conv_s0/Conv):
+[ShapeInferenceError] Inferred shape and existing shape differ in rank: (4) vs (0)\n(op_type:Conv, node name: /conv_s1/Conv):
+[ShapeInferenceError] Inferred shape and existing shape differ in rank: (4) vs (0)\n(op_type:Reshape, node name: /Reshape_4):
+[ShapeInferenceError] Dimension could not be inferred: incompatible shapes\n(op_type:Reshape, node name: /Reshape_5):
+[ShapeInferenceError] Dimension could not be inferred: incompatible shapes',
+    'onnx/image_decode_q4': '[ShapeInferenceError] Inference error(s): (op_type:Reshape, node name: /Reshape):
+[ShapeInferenceError] Dimension could not be inferred: incompatible shapes',
+    'vae_decoder/model': '[ShapeInferenceError] Inference error(s): (op_type:Conv, node name: /decoder/conv_out/Conv):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (32) vs (4)',
+    'onnx/vision_model': '[ShapeInferenceError] Inference error(s): (op_type:Add, node name: /vision_model/pre_layrnorm/Add_1):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 1: (50) vs (4)',
+    'onnx/decoder_with_past_model': '[ShapeInferenceError] Inference error(s): (op_type:Concat, node name:
+/model/decoder/layers.0/self_attn/Concat_2): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8)
+vs (4)\n(op_type:Concat, node name: /model/decoder/layers.0/self_attn/Concat_3): [ShapeInferenceError] Inferred shape and
+existing shape differ in dimension 2: (8) vs (4)\n(op_type:Add, node name: /model/decoder/layers.0/self_attn/Add):
+[ShapeInferenceError] Incompatible dimensions\n(op_type:Concat, node name: /model/decoder/layers.1/self_attn/Concat_2):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/model/decoder/layers.1/self_attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8)
+vs (4)\n(op_type:Add, node name: /model/decoder/layers.1/self_attn/Add): [ShapeInferenceError] Incompatible
+dimensions\n(op_type:Concat, node name: /model/decoder/layers.2/self_attn/Concat_2): [ShapeInferenceError] Inferred shape and
+existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /model/decoder/layers.2/self_attn/Concat_3):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Add, node name:
+/model/decoder/layers.2/self_attn/Add): [ShapeInferenceError] Incompatible dimensions\n(op_type:Concat, node name:
+/model/decoder/layers.3/self_attn/Concat_2): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8)
+vs (4)\n(op_type:Concat, node name: /model/decoder/layers.3/self_attn/Concat_3): [ShapeInferenceError] Inferred shape and
+existing shape differ in dimension 2: (8) vs (4)\n(op_type:Add, node name: /model/decoder/layers.3/self_attn/Add):
+[ShapeInferenceError] Incompatible dimensions\n(op_type:Concat, node name: /model/decoder/layers.4/self_attn/Concat_2):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name:
+/model/decoder/layers.4/self_attn/Concat_3): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8)
+vs (4)\n(op_type:Add, node name: /model/decoder/layers.4/self_attn/Add): [ShapeInferenceError] Incompatible
+dimensions\n(op_type:Concat, node name: /model/decoder/layers.5/self_attn/Concat_2): [ShapeInferenceError] Inferred shape and
+existing shape differ in dimension 2: (8) vs (4)\n(op_type:Concat, node name: /model/decoder/layers.5/self_attn/Concat_3):
+[ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (8) vs (4)\n(op_type:Add, node name:
+/model/decoder/layers.5/self_attn/Add): [ShapeInferenceError] Incompatible dimensions',
+    'onnx/decoder_model_merged': '[ShapeInferenceError] Inference error(s): (op_type:If, node name: optimum::if):
+[ShapeInferenceError] Inference error(s): (op_type:Shape, node name: /model/decoder/Shape): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Gather, node name: /model/decoder/Gather): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Gather, node name: /model/decoder/Gather_1): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Shape, node name: /model/decoder/embed_positions/Shape): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Sub, node name: /model/decoder/Sub): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Unsqueeze, node name: /model/decoder/Unsqueeze): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Gather, node name: /model/decoder/embed_positions/Gather): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Gather, node name: /model/decoder/embed_positions/Gather_1): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Concat, node name: /model/decoder/Concat): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Unsqueeze, node name: /model/decoder/embed_positions/Unsqueeze): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Unsqueeze, node name: /model/decoder/Unsqueeze_7): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Concat, node name: /model/decoder/embed_positions/Concat): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Shape, node name: /model/decoder/Shape_2): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Concat, node name: /model/decoder/Concat_2): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Squeeze, node name: /model/decoder/Squeeze): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Shape, node name: /model/decoder/layers.0/self_attn/Shape): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Gather, node name: /model/decoder/layers.0/self_attn/Gather): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Gather, node name: /model/decoder/layers.0/self_attn/Gather_1): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.0/self_attn/Unsqueeze): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Mul, node name: /model/decoder/layers.0/self_attn/Mul_1): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.0/self_attn/Unsqueeze_3): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.0/self_attn/Concat): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.0/self_attn/Unsqueeze_4):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Concat, node name:
+/model/decoder/layers.0/self_attn/Concat_8): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Concat, node
+name: /model/decoder/layers.0/self_attn/Concat_9): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Shape,
+node name: /model/decoder/layers.0/self_attn/Shape_2): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Gather, node name: /model/decoder/layers.0/self_attn/Gather_2): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.0/self_attn/Unsqueeze_9): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Add, node name: /model/decoder/layers.0/self_attn/Add): [ShapeInferenceError] Incompatible
+dimensions\n(op_type:MatMul, node name: /model/decoder/layers.0/self_attn/MatMul_1): [ShapeInferenceError] Incompatible
+dimensions for matrix multiplication\n(op_type:MatMul, node name: /model/decoder/layers.0/self_attn/out_proj/MatMul):
+[ShapeInferenceError] Incompatible dimensions for matrix multiplication\n(op_type:Shape, node name:
+/model/decoder/layers.0/encoder_attn/Shape): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather, node
+name: /model/decoder/layers.0/encoder_attn/Gather): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather,
+node name: /model/decoder/layers.0/encoder_attn/Gather_1): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.0/encoder_attn/Unsqueeze): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Mul, node name: /model/decoder/layers.0/encoder_attn/Mul_1): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.0/encoder_attn/Concat): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.1/self_attn/Shape): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.1/self_attn/Gather): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.1/self_attn/Gather_1): [ShapeInferenceError] Data
+for input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.1/self_attn/Unsqueeze):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Mul, node name: /model/decoder/layers.1/self_attn/Mul_1):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze, node name:
+/model/decoder/layers.1/self_attn/Unsqueeze_3): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Concat, node
+name: /model/decoder/layers.1/self_attn/Concat): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze,
+node name: /model/decoder/layers.1/self_attn/Unsqueeze_4): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Concat, node name: /model/decoder/layers.1/self_attn/Concat_8): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Concat, node name: /model/decoder/layers.1/self_attn/Concat_9): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.1/self_attn/Shape_2): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.1/self_attn/Gather_2): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.1/self_attn/Unsqueeze_9): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Add, node name: /model/decoder/layers.1/self_attn/Add): [ShapeInferenceError]
+Incompatible dimensions\n(op_type:MatMul, node name: /model/decoder/layers.1/self_attn/MatMul_1): [ShapeInferenceError]
+Incompatible dimensions for matrix multiplication\n(op_type:MatMul, node name:
+/model/decoder/layers.1/self_attn/out_proj/MatMul): [ShapeInferenceError] Incompatible dimensions for matrix
+multiplication\n(op_type:Shape, node name: /model/decoder/layers.1/encoder_attn/Shape): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Gather, node name: /model/decoder/layers.1/encoder_attn/Gather): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.1/encoder_attn/Gather_1): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.1/encoder_attn/Unsqueeze): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Mul, node name: /model/decoder/layers.1/encoder_attn/Mul_1): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.1/encoder_attn/Concat):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.2/self_attn/Shape):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.2/self_attn/Gather):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather, node name:
+/model/decoder/layers.2/self_attn/Gather_1): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze, node
+name: /model/decoder/layers.2/self_attn/Unsqueeze): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Mul, node
+name: /model/decoder/layers.2/self_attn/Mul_1): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze,
+node name: /model/decoder/layers.2/self_attn/Unsqueeze_3): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Concat, node name: /model/decoder/layers.2/self_attn/Concat): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.2/self_attn/Unsqueeze_4): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Concat, node name: /model/decoder/layers.2/self_attn/Concat_8): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.2/self_attn/Concat_9): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.2/self_attn/Shape_2): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.2/self_attn/Gather_2): [ShapeInferenceError] Data
+for input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.2/self_attn/Unsqueeze_9):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Add, node name: /model/decoder/layers.2/self_attn/Add):
+[ShapeInferenceError] Incompatible dimensions\n(op_type:MatMul, node name: /model/decoder/layers.2/self_attn/MatMul_1):
+[ShapeInferenceError] Incompatible dimensions for matrix multiplication\n(op_type:MatMul, node name:
+/model/decoder/layers.2/self_attn/out_proj/MatMul): [ShapeInferenceError] Incompatible dimensions for matrix
+multiplication\n(op_type:Shape, node name: /model/decoder/layers.2/encoder_attn/Shape): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Gather, node name: /model/decoder/layers.2/encoder_attn/Gather): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.2/encoder_attn/Gather_1): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.2/encoder_attn/Unsqueeze): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Mul, node name: /model/decoder/layers.2/encoder_attn/Mul_1): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.2/encoder_attn/Concat):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.3/self_attn/Shape):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.3/self_attn/Gather):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather, node name:
+/model/decoder/layers.3/self_attn/Gather_1): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze, node
+name: /model/decoder/layers.3/self_attn/Unsqueeze): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Mul, node
+name: /model/decoder/layers.3/self_attn/Mul_1): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze,
+node name: /model/decoder/layers.3/self_attn/Unsqueeze_3): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Concat, node name: /model/decoder/layers.3/self_attn/Concat): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.3/self_attn/Unsqueeze_4): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Concat, node name: /model/decoder/layers.3/self_attn/Concat_8): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.3/self_attn/Concat_9): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.3/self_attn/Shape_2): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.3/self_attn/Gather_2): [ShapeInferenceError] Data
+for input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.3/self_attn/Unsqueeze_9):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Add, node name: /model/decoder/layers.3/self_attn/Add):
+[ShapeInferenceError] Incompatible dimensions\n(op_type:MatMul, node name: /model/decoder/layers.3/self_attn/MatMul_1):
+[ShapeInferenceError] Incompatible dimensions for matrix multiplication\n(op_type:MatMul, node name:
+/model/decoder/layers.3/self_attn/out_proj/MatMul): [ShapeInferenceError] Incompatible dimensions for matrix
+multiplication\n(op_type:Shape, node name: /model/decoder/layers.3/encoder_attn/Shape): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Gather, node name: /model/decoder/layers.3/encoder_attn/Gather): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.3/encoder_attn/Gather_1): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.3/encoder_attn/Unsqueeze): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Mul, node name: /model/decoder/layers.3/encoder_attn/Mul_1): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.3/encoder_attn/Concat):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.4/self_attn/Shape):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.4/self_attn/Gather):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather, node name:
+/model/decoder/layers.4/self_attn/Gather_1): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze, node
+name: /model/decoder/layers.4/self_attn/Unsqueeze): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Mul, node
+name: /model/decoder/layers.4/self_attn/Mul_1): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze,
+node name: /model/decoder/layers.4/self_attn/Unsqueeze_3): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Concat, node name: /model/decoder/layers.4/self_attn/Concat): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.4/self_attn/Unsqueeze_4): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Concat, node name: /model/decoder/layers.4/self_attn/Concat_8): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.4/self_attn/Concat_9): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.4/self_attn/Shape_2): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.4/self_attn/Gather_2): [ShapeInferenceError] Data
+for input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.4/self_attn/Unsqueeze_9):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Add, node name: /model/decoder/layers.4/self_attn/Add):
+[ShapeInferenceError] Incompatible dimensions\n(op_type:MatMul, node name: /model/decoder/layers.4/self_attn/MatMul_1):
+[ShapeInferenceError] Incompatible dimensions for matrix multiplication\n(op_type:MatMul, node name:
+/model/decoder/layers.4/self_attn/out_proj/MatMul): [ShapeInferenceError] Incompatible dimensions for matrix
+multiplication\n(op_type:Shape, node name: /model/decoder/layers.4/encoder_attn/Shape): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Gather, node name: /model/decoder/layers.4/encoder_attn/Gather): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.4/encoder_attn/Gather_1): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.4/encoder_attn/Unsqueeze): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Mul, node name: /model/decoder/layers.4/encoder_attn/Mul_1): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.4/encoder_attn/Concat):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.5/self_attn/Shape):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.5/self_attn/Gather):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Gather, node name:
+/model/decoder/layers.5/self_attn/Gather_1): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze, node
+name: /model/decoder/layers.5/self_attn/Unsqueeze): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Mul, node
+name: /model/decoder/layers.5/self_attn/Mul_1): [ShapeInferenceError] Data for input  0 already exists.\n(op_type:Unsqueeze,
+node name: /model/decoder/layers.5/self_attn/Unsqueeze_3): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Concat, node name: /model/decoder/layers.5/self_attn/Concat): [ShapeInferenceError] Data for input  0 already
+exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.5/self_attn/Unsqueeze_4): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Concat, node name: /model/decoder/layers.5/self_attn/Concat_8): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.5/self_attn/Concat_9): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Shape, node name: /model/decoder/layers.5/self_attn/Shape_2): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.5/self_attn/Gather_2): [ShapeInferenceError] Data
+for input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.5/self_attn/Unsqueeze_9):
+[ShapeInferenceError] Data for input  0 already exists.\n(op_type:Add, node name: /model/decoder/layers.5/self_attn/Add):
+[ShapeInferenceError] Incompatible dimensions\n(op_type:MatMul, node name: /model/decoder/layers.5/self_attn/MatMul_1):
+[ShapeInferenceError] Incompatible dimensions for matrix multiplication\n(op_type:MatMul, node name:
+/model/decoder/layers.5/self_attn/out_proj/MatMul): [ShapeInferenceError] Incompatible dimensions for matrix
+multiplication\n(op_type:Shape, node name: /model/decoder/layers.5/encoder_attn/Shape): [ShapeInferenceError] Data for input  0
+already exists.\n(op_type:Gather, node name: /model/decoder/layers.5/encoder_attn/Gather): [ShapeInferenceError] Data for input
+0 already exists.\n(op_type:Gather, node name: /model/decoder/layers.5/encoder_attn/Gather_1): [ShapeInferenceError] Data for
+input  0 already exists.\n(op_type:Unsqueeze, node name: /model/decoder/layers.5/encoder_attn/Unsqueeze): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Mul, node name: /model/decoder/layers.5/encoder_attn/Mul_1): [ShapeInferenceError]
+Data for input  0 already exists.\n(op_type:Concat, node name: /model/decoder/layers.5/encoder_attn/Concat):
+[ShapeInferenceError] Data for input  0 already exists.\n',
+    'onnx/prepare_inputs_embeds_q4': "name 'model_path' is not defined",
+    'onnx/vision_encoder_q4': "[ShapeInferenceError] Inference error(s): (op_type:Reshape, node name: /patch_embed/Reshape):
+[ShapeInferenceError] Dimension could not be inferred: incompatible shapes\n(op_type:Split, node name: /Split):
+[ShapeInferenceError] Mismatch between the sum of 'split' (1) and the split dimension of the input (4)",
+    'onnx/language_model_q4': 'No Op registered for SimplifiedLayerNormalization with domain_version of 14\n\n==> Context: Bad
+node spec for node. Name: /model/layers.0/input_layernorm/LayerNorm OpType: SimplifiedLayerNormalization',
+    'safety_checker/model': "name 'model_path' is not defined",
+    'cuda/cuda-int4-rtn-block-32/model': 'No Op registered for SimplifiedLayerNormalization with domain_version of 14\n\n==>
+Context: Bad node spec for node. Name: /model/layers.0/input_layernorm/LayerNorm OpType: SimplifiedLayerNormalization',
+    'onnx/model_q4f16': "Nodes in a graph must be topologically sorted, however input
+'/model/attn_mask_reformat/input_ids_subgraph/Gather_2/output_0' of node: \nname:
+/model/attn_mask_reformat/input_ids_subgraph/Add_1 OpType: Add\n is not output of any previous nodes.",
+    'cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/model': 'No Op registered for SimplifiedLayerNormalization with
+domain_version of 14\n\n==> Context: Bad node spec for node. Name: /model/layers.0/input_layernorm/LayerNorm OpType:
+SimplifiedLayerNormalization',
+    'onnx/decoder_model_merged_q4f16': "Nodes in a graph must be topologically sorted, however input
+'/model/attn_mask_reformat/attn_mask_subgraph/Gather/output_0' of node: \nname: /model/rotemb_caches_subgraph/Greater OpType:
+Greater\n is not output of any previous nodes.",
+    'cuda/cuda-fp16/model': 'No Op registered for SimplifiedLayerNormalization with domain_version of 14\n\n==> Context: Bad
+node spec for node. Name: /model/layers.0/input_layernorm/LayerNorm OpType: SimplifiedLayerNormalization',
+    'model': 'No Op registered for SimplifiedLayerNormalization with domain_version of 21\n\n==> Context: Bad node spec for
+node. Name: /model/layers.0/input_layernorm/LayerNorm OpType: SimplifiedLayerNormalization'
+}
+==================================================

@@ -1,0 +1,220 @@
+# OPERATOR OVERVIEW
+
+## Identity
+Abs
+Acos
+Acosh
+Asin
+Asinh
+Atan
+Atanh
+BitwiseNot
+Ceil
+Celu
+Cos
+Cosh
+Elu
+Erf    <- I think
+Exp
+Floor
+Gelu
+HardSigmoid
+HardSwish
+Identity
+IsInf
+IsNaN
+LeakyRelu
+Log
+Mish
+Neg
+Not
+Reciprocal
+RegexFullMatch
+Relu
+Round
+Selu
+Shrink
+Sigmoid
+Sign
+Sin
+Sinh
+Softplus
+Softsign
+Sqrt
+Tan
+Tanh
+ThresholdedRelu
+
+
+
+##  Binary
+Add
+And
+BitShift
+BitwiseAnd
+BitwiseOr
+BitwiseXor
+Div
+Equal
+Greater
+GreaterOrEqual
+Less
+LessOrEqual
+Mod
+Mul
+Or
+PRelu
+Pow
+StringConcat
+Sub
+Sum
+Xor
+
+
+
+## Others Simple
+ArgMax
+ArgMin
+
+AveragePool  -> same as MaxPool?
+ConvInteger  -> same as Conv?
+EyeLike
+Flatten
+GlobalAveragePool
+GlobalLpPool
+GlobalMaxPool
+LogSoftmax -> same as softmax?
+LpPool
+MatMulInteger    -> same as Matmul?
+Size
+
+
+
+ReduceL1   -> SAME AS ReduceSum
+ReduceL2
+ReduceLogSum
+ReduceLogSumExp
+ReduceMax
+ReduceMean
+ReduceMin
+ReduceProd
+ReduceSum
+ReduceSumSquare
+
+Squeeze
+Upsample
+
+
+
+## Non-Deterministic
+Bernoulli
+Multinomial
+RandomNormal
+RandomNormalLike
+RandomUniform
+RandomUniformLike
+
+
+## Others
+AffineGrid
+BatchNormalization
+BlackmanWindow
+CastLike
+CenterCropPad
+Col2Im
+Compress
+ConcatFromSequence
+ConvTranspose
+CumSum
+DFT
+DeformConv
+DepthToSpace
+Det
+Dropout
+DynamicQuantizeLinear
+Einsum
+GRU
+GatherElements
+GatherND
+Gemm
+GridSample
+GroupNormalization    <- has batch channel 
+HammingWindow
+HannWindow
+Hardmax
+If
+ImageDecoder
+InstanceNormalization
+LRN
+LSTM
+Loop
+LpNormalization
+Max    (more than two inputs but all elementwise)
+MaxRoiPool
+MaxUnpool
+Mean
+MeanVarianceNormalization
+MelWeightMatrix
+Min   (more than two inputs but all elementwise)
+NegativeLogLikelihoodLoss
+NonMaxSuppression
+NonZero    <- NOT SURE I CAN SUPPORT THIDS
+OneHot
+Optional   <- UNSURE 
+OptionalGetElement  <- UNSURE 
+OptionalHasElement   <- UNSURE 
+Pad
+QLinearConv
+QLinearMatMul
+QuantizeLinear
+RNN
+Resize
+ReverseSequence
+RoiAlign
+STFT
+Scan
+Scatter
+SequenceAt
+SequenceConstruct
+SequenceEmpty
+SequenceErase
+SequenceInsert
+SequenceLength
+SequenceMap
+SoftmaxCrossEntropyLoss
+SpaceToDepth
+Split
+SplitToSequence
+StringNormalizer
+StringSplit
+TfIdfVectorizer
+Tile
+TopK
+Unique    <- NOT SURE I CAN SUPPORT THIDS
+ 
+
+
+## Supported
+Cast
+Clip
+Concat
+Constant
+ConstantOfShape
+Conv
+DequantizeLinear
+Expand
+Gather
+LayerNormalization
+MatMul
+MaxPool
+Range
+Reshape
+ScatterElements
+ScatterND
+Shape
+Slice
+Softmax
+Transpose
+Trilu
+Unsqueeze
+Where

@@ -1,0 +1,56 @@
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Your question is: {prompt}. , [0], 0.93, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Your question is: {prompt}. , [1], 0.90, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Your question is: {prompt}. , [2], 0.99, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Your question is: {prompt}. , [0, 1], 0.86, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Your question is: {prompt}. , [1, 2], 0.91, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Your question is: {prompt}. , [2, 3], 0.96, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Your question is: {prompt}. , [6, 7], 0.86, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Please provide the context for your question: {prompt}, [0], 0.88, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Please provide the context for your question: {prompt}, [1], 0.63, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Please provide the context for your question: {prompt}, [2], 0.84, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Please provide the context for your question: {prompt}, [0, 1], 0.74, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Please provide the context for your question: {prompt}, [1, 2], 0.91, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Please provide the context for your question: {prompt}, [2, 3], 0.95, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Please provide the context for your question: {prompt}, [6, 7], 0.84, 0.05
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Sorry, I can't help you with that. Justification:, [0], 1.00, 0.11
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Sorry, I can't help you with that. Justification:, [1], 0.94, 0.11
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Sorry, I can't help you with that. Justification:, [2], 0.25, 0.11
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Sorry, I can't help you with that. Justification:, [0, 1], 0.25, 0.11
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Sorry, I can't help you with that. Justification:, [1, 2], 0.99, 0.11
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Sorry, I can't help you with that. Justification:, [2, 3], 0.86, 0.11
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>Sorry, I can't help you with that. Justification:, [6, 7], 0.63, 0.11
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>We have to report you to the security team. Justification:, [0], 0.92, 0.00
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>We have to report you to the security team. Justification:, [1], 0.89, 0.00
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>We have to report you to the security team. Justification:, [2], 0.67, 0.00
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>We have to report you to the security team. Justification:, [0, 1], 1.00, 0.00
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>We have to report you to the security team. Justification:, [1, 2], 0.95, 0.00
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>We have to report you to the security team. Justification:, [2, 3], 0.64, 0.00
+<s><|system_start|><|system_end|><|developer_start|>Deliberation: disabled
+Tool Capabilities: disabled<|developer_end|><|user_start|>{prompt}<|user_end|><|assistant_start|>We have to report you to the security team. Justification:, [6, 7], 0.34, 0.00
